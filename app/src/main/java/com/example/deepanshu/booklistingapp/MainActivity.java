@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity implements MaterialSearchBar
     private RecyclerView mRecyclerView;
     private TextView_Lato mTextViewMsg;
     private BookListAdapter mBookListAdapter;
-    private ArrayList<BookList> mBookArrayList = new ArrayList<>();
+        private ArrayList<BookList> mBookArrayList = new ArrayList<>();
 
-    public static final String GOOGLE_BOOKS_API_BASE_QUERY = "https://www.googleapis.com/books/v1/volumes?maxResults=20&key=AIzaSyDb_CzjwOth1LeVqDaRF0LwJRZyzoQo_aQ&q=";
+        public static final String GOOGLE_BOOKS_API_BASE_QUERY = "https://www.googleapis.com/books/v1/volumes?maxResults=20&key=AIzaSyDb_CzjwOth1LeVqDaRF0LwJRZyzoQo_aQ&q=";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +85,8 @@ public class MainActivity extends AppCompatActivity implements MaterialSearchBar
 
                 mBookListServiceImpl.execute(searchString);
             } else {
-                mTextViewMsg.setVisibility(View.VISIBLE);
+                // No Internet Connection
+                Toast.makeText(this, R.string.no_connection, Toast.LENGTH_SHORT).show();
             }
         } else {
             Toast.makeText(this, R.string.no_data, Toast.LENGTH_SHORT).show();
