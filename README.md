@@ -16,10 +16,10 @@ This project is about combining various ideas and skills we’ve been practicing
 4. Creating a list based on that data and displaying it to the user.
 
 ## Requirements
-To achieve this, I'll make use of the [https://developers.google.com/books/docs/v1/getting_started#intro](Google Books API). This is a well-maintained API which returns information in a JSON format.
+To achieve this, I'll make use of the [Google Books API](https://developers.google.com/books/docs/v1/getting_started#intro). This is a well-maintained API which returns information in a JSON format.
 An example query that we found useful was :
 
-[https://www.googleapis.com/books/v1/volumes?q=android&maxResults=1]
+https://www.googleapis.com/books/v1/volumes?q=android&maxResults=1
 
 ## Final Output - Screenshots
 
