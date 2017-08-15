@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity implements MaterialSearchBar
     private RecyclerView mRecyclerView;
     private TextView_Lato mTextViewMsg;
     private BookListAdapter mBookListAdapter;
-        private ArrayList<BookList> mBookArrayList = new ArrayList<>();
+    private ArrayList<BookList> mBookArrayList = new ArrayList<>();
 
-        public static final String GOOGLE_BOOKS_API_BASE_QUERY = "https://www.googleapis.com/books/v1/volumes?maxResults=20&key=AIzaSyDb_CzjwOth1LeVqDaRF0LwJRZyzoQo_aQ&q=";
+    public static final String GOOGLE_BOOKS_API_BASE_QUERY = "https://www.googleapis.com/books/v1/volumes?maxResults=20&key=AIzaSyC5gSOScPvSCrPssIez0VRSPXHfDsH7bUY&q=";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +79,9 @@ public class MainActivity extends AppCompatActivity implements MaterialSearchBar
                     @Override
                     public void onPostExecute(ArrayList<BookList> bookArrayList) {
 
-                        setViews(mBookArrayList = bookArrayList);
+                        if (bookArrayList != null) {
+                            setViews(mBookArrayList = bookArrayList);
+                        }
                     }
                 });
 
