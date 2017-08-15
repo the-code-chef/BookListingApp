@@ -79,9 +79,7 @@ public class MainActivity extends AppCompatActivity implements MaterialSearchBar
                     @Override
                     public void onPostExecute(ArrayList<BookList> bookArrayList) {
 
-                        if (bookArrayList != null) {
-                            setViews(mBookArrayList = bookArrayList);
-                        }
+                        setViews(mBookArrayList = bookArrayList);
                     }
                 });
 
@@ -97,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements MaterialSearchBar
 
     private void setViews(ArrayList<BookList> mBookArrayList) {
 
-        if (mBookArrayList.size() > 0) {
+        if (mBookArrayList != null && mBookArrayList.size() > 0) {
             setList();
             mBookListAdapter.clear();
             mBookListAdapter.addAll(mBookArrayList);
